@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Combinator</title>
+        <style>
+            /*Descendant selector*/
+            div p{
+                color:brown;
+            }
+            /*Child selector*/
+            div > p{
+                color: blue;
+            }
+            /*Adjacent sibling selector*/
+            div + p{
+                color: chartreuse;
+            }
+            /*General sibling selector*/    
+            div~p{
+                color:blueviolet;
+            }
+
+        </style>
+    </head>
+    <body>
+        <!--Combinator
+        1.Descendant selector
+        2.child selector
+        3.Adjacent sibling selector
+        4.General sibling selector
+    -->
+        <!--Relation of selector-->
+        <div>
+            <p>Lorem ipsum dolor sit.</p>
+            <p>Lorem ipsum dolor sit amet consectetur.</p>
+            <span>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+            </span>
+        </div>
+        <p>Lorem, ipsum.</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. At.</p>
+        <div>Lorem, ipsum dolor.</div>
+    </body>
+</html>

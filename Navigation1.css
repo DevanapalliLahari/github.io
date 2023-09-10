@@ -1,0 +1,23 @@
+ul{
+    list-style-type: none;
+    background-color: green;
+    
+}
+li{
+    display: block;
+    padding: 10px;
+    color: rgb(230, 16, 16);
+}
+body{
+    padding:0 1000px 0 0;
+    
+}
+a{
+    text-decoration: none;
+}
+li:hover{
+    background-color: rgb(144, 143, 149);
+}
+li a:hover{
+    background-color: rgb(82, 73, 126);
+}

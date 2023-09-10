@@ -1,0 +1,238 @@
+<!doctype html>
+<html>  
+<head>
+    <title>
+        HTML Introduction
+
+    </title>
+</head>
+<body>
+<h1>Html Introduction</h1>
+<h2>Basic</h2>
+<h3>Basic...</h3>
+<h4>Basic</h4>
+<h5>Basic</h5>
+<h6>Basic</h6>
+<p>We are learning HTML</p>
+<p>Xworkz &copy;</p> <!--Special symbols-->
+<p>Xworkz is Registered &reg;</p>
+<p>&trade;</p>
+<p>Black day <span style="color:black;font-size:50px ;">&hearts;</span>
+</p>
+<!--ol is element and type and start is attribute-->
+<ol type="a" start="2">  <!--Ordered list-->
+    <li>Hii</li>
+    <li>Hello</li>
+    <li>Good Morning</li>
+</ol>
+
+<ul type="circle">  <!--Unordered list-->
+    <li>NTR</li>
+    <li>Ram</li>
+    <li>RC</li>
+</ul>
+
+<ul type="dot">  <!--Unordered list-->
+    <li>NTR</li>
+    <li>Ram</li>
+    <li>RC</li>
+
+    <!--Displaying Images-->
+</ul>
+<img src="Pic.jpeg">
+<img src="c:\Users\91939\Downloads\WhatsApp Image 2023-06-11 at 12.44.34 PM (1).jpeg">
+
+<!--Hyper link--><!--_blank used to open on new tab-->
+<a href="https://facebook.com" target="_blank">facebook</a>
+
+<!--Table Creation-->
+<table>
+    <tr>
+        <th>Hospital name</th>
+        <th>Location</th>
+        <th>No of doctors</th>
+    </tr>
+    <tr>
+        <td>Apollo</td>
+        <td>Bengalore</td>
+        <td>30</td>
+    </tr>
+    <tr>
+        <td>st.John's</td>
+        <td>Bengalore</td>
+        <td>20</td>
+    </tr>
+</table>
+
+    <!--Form-->
+
+    <form>
+        <div><!--used to break the line-->
+            <!-- <br>also used to break the link-->
+            <label>Enter first name</label>
+            <br>
+            <input type="text" name="firstName" placeholder="Enter First Name"
+            required maxlength="10">
+        </div>
+        <div>
+            <label>Enter last name</label>
+            <input type="text" name="lastName" placeholder="Enter Last Name"required >
+        </div>
+        <div>
+            <label>Enter Email</label>
+            <input type="email" name="emailId" placeholder="Enter EmailId" required>
+        </div>
+        <div>
+            <label>Enter Password</label>
+            <input type="password" name="Password" placeholder="Enter Password">
+        </div>
+    </form>
+
+<table>
+    <form>
+        <tr>
+            <th>Enter first name  </th>
+            <td><input type="text" name="firstname"></td>
+        </tr>
+    </form>
+</table>
+
+<table>
+    <form>
+        <tr>
+             <div>
+                <label>Select Gender</label>
+                <input type="radio" name="gender">male
+                <input type="radio" name="gender">female
+                <input type="radio" name="gender">others
+            </div>
+        </tr>
+     </form>
+</table>
+<div>
+    <label>Select City</label>
+    <Select>
+        <option>Bangloore</option>
+        <option>Mysoore</option>
+        <option>Hasson</option>
+    </Select>
+</div>
+<div>
+    <lable>Date Of Birth</lable>
+    <input type="date" name="Date of birth">
+
+</div>
+<div>
+    <lable>Age</lable>
+    <input type="number" name="Age" min="0" max="50">
+</div>
+<div>
+    <label>Enter Address</label>
+    <textarea rows="5" cols="10"></textarea>
+</div>
+<div>
+    <label>Upload Files</label>
+    <input type="File" name="Upload Files">
+</div>
+<form>
+    <button type="submit">Register</button>
+    <button type="reset">Reset</button>
+
+</form>
+   <!-- Github Pages
+    For deployment-->
+<!-- HTML5 validation-->
+
+</body>
+</html>
+
+
+<!-- CSS
+HTML-COlor,alignment,increase text size,background Images
+CSS-advantage
+COlor,alignment,increase text size,background Images
+
+SYNTAX 
+
+selector{
+    property:value;
+    property1:value2;
+}
+-->
+
+
+
+<!--Different Selector
+1.Element selector
+2.Grouping selector   h1,h2
+3.Class selector   .grouping
+4.Id selector     #idselector-->
+
+<!doctype html>
+<html>
+    <Head>
+        <title>CSS
+        </title>
+        <style>
+            h1{
+                color:black;
+            }
+            h2{
+                color:black;
+            }
+           
+            h1,h2{
+                color:aqua;
+            }
+           
+            .grouping{
+                color:blueviolet;
+                font-size:100px;
+
+            }
+            #idselector{
+                color:blue;
+            }
+          
+        </style>
+    </Head>
+    <Body>
+        <h1>Hiii</h1>
+        <h2>Hello</h2>
+        <h1 class="grouping">Where are you</h1>
+        <h3 class="grouping" id="idselector">CSS.....</h3>
+    </Body>
+</html>
+
+<html>
+    <head>
+        <title>CSS Box Model</title>
+        <style>
+            .boxmodel{
+                padding: 50px 40px 30px 10px;
+                padding-top: 20px;
+                padding-left: 30;
+                padding-bottom: 10px;
+                padding-right: 20px;
+
+                border: 5px solid red;
+
+                margin:10px 20px 30px 40px;
+                margin-top: 20px;
+                margin-top: 10px;
+
+            }
+            .border{
+                border:2px dotted green;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="boxmodel">Box model has three properties
+            1.Margin
+            2.border
+            3.Padding
+        </div>
+        <div class="border">Box</div>
+    </body>
+</html>

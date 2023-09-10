@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Registration</title>
+        <script>
+            function register()
+            {
+                console.log("Calling register function")
+                var firstName=document.getElementById('firstName')
+                console.log(firstName)
+                console.log(firstName.value)
+
+                var firstNameError=document.getElementById('firstNameError')
+                firstNameError.innerHTML=''
+                
+                if(firstName.value=='')
+                {
+                    console.log('Please enter firstName')
+                  
+                    firstNameError.innerHTML='Please enter firstName'
+                    firstNameError.style.color='red'
+                }
+
+                //email
+                var email=document.registration.email
+                console.log(email)
+                var email=document.registration.email
+                emailError.innerHTML=''
+                if(email.value=='')
+                {
+                    console.log('Please enter email')
+                    emailError.innerHTML='Please enter email'
+                    emailError.style.color='red'
+                }
+                //password
+                var password=document.registration.password
+                console.log(password)
+                var password=document.registration.password
+                passwordError.innerHTML=''
+                if(password.value=='')
+                {
+                    console.log('Please enter password')
+                    passwordError.innerHTML='Please enter password'
+                    passwordError.style.color='red'
+                }
+                //city
+
+                var city=document.registration.city
+                console.log(city)
+                var city=document.registration.city
+                cityError.innerHTML=''
+                if(city.value==0)
+                {
+                    console.log("Please select City")
+                    cityError.innerHTML='Please select City'
+                    cityError.style.color='red'
+                }
+
+                //gender
+                var gender=document.registration.gender
+                console.log(gender)
+                console.log(gender[0])
+                console.log(gender[1])
+                console.log(gender[2])
+                console.log(gender[0].checked)
+                console.log(gender[1].checked)
+                console.log(gender[2].checked)
+
+               // for(var i=0;i<gender.length;i++)
+                //{
+               //     console.log(gender[i])
+               // }
+               var gender=document.registration.gender
+               genderError.innerHTML=''
+
+                if(gender[0].checked==false && gender[1].checked==false && gender[2].checked==false)
+                {
+                    console.log('Please select gender')
+                    genderError.innerHTML='Please select gender'
+                    genderError.style.color='red'
+                }
+                var genderData
+                if(gender[0].checked==true )
+                {
+                    genderData=gender[0].value
+                }
+                else if(gender[1].checked=true)
+                {
+                    genderData=gender[1].value
+                }
+                else{
+                    genderDate=gender[3].value
+                }
+                console.log("gender Data " +genderData)
+                console.log(firstName.value)
+                console.log(email.value)
+                console.log(password.value)
+                console.log(gender)
+                //Storage
+                //local storage-Permanent storage-until you delete that data it will not delete
+                //session storage-temporary storage-it will deletes when we close the browser
+
+                localStorage.setItem("Charlie","charlie777")
+                var data=localStorage.getItem("Charlie")
+                console.log(data)
+                var userobject={
+                    "firstName":firstName.value,
+                    "email":email.value,
+                    "password":password.value,
+                    "gender":genderData,
+                    "city":city.value  
+                }
+                console.log(userobject)
+
+                var userObjectString=JSON.stringify(userobject)
+                localStorage.setItem("Course12",userObjectString)
+               
+            }
+        </script>
+    </head>
+    <body>
+        <form name="registration">
+            <div>
+                <label>Enter FirstName</label>
+                <input type="text" name="firstName" id="firstName">
+                <span id="firstNameError"></span>
+            </div>
+            <div>
+                <label>Enter EmailId</label>
+                <input type="email" name="email">
+               <span id="emailError"></span>
+            </div>
+            <div>
+                <label>Enter Password</label>
+                <input type="password" name="password">
+                <span id="passwordError"></span>
+            </div>
+            <div>
+                <label>Select Gender</label>
+                <input type="radio" name="gender" value="male">Male
+                <input type="radio" name="gender" value="female">Female
+                <input type="radio" name="gender" value="others">Others
+                <span id="genderError"></span>
+            </div>
+
+            <div>
+                <label>Select city</label>
+                <select name="city">
+                    <option value="0">--SelectCity--</option>
+                    <option>Bangalore</option>
+                    <option>Mysore</option>
+                    <option>Hyderabad</option>
+                    <option>Hassan</option>
+                </select>
+                <span id="cityError"></span>
+            </div>
+            
+            <!--document.formName.fieldName insted of getelementby.....we are using this -->
+            <button type="button" onclick="register()">Register</button>
+        </form>
+    </body>
+</html>

@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>JavaScript</title>
+        <Script>
+        console.log("Introduction to JavaScript")
+        console.log(a)//hoisting
+        var a
+        console.log(a)//undefined
+        console.log(typeof(a))//undefined datatype
+        var b=10
+        console.log(b)//10
+        console.log(typeof(b))//number datatype
+        var b='Java script'
+        console.log(b)//javascript
+        console.log(typeof(b))//string datatype
+        var b=true
+        console.log(b)//true
+        console.log(typeof(b))//boolean datatype
+
+        //Data types
+        //Undefied,string,number,boolean
+
+        //Functions
+        //function functionname()
+
+        function display()
+        {
+            console.log("Calling display")
+
+        }
+        display()
+
+        //parametarized function
+
+        function add(a,b)
+        {
+            console.log(a)
+            console.log(b)
+        }
+        add(10,20)
+
+        document.write("Introduction to javascript")
+        document.write("<h1>Javascript is used to create dynamic web pages</h1>")
+        document.write("<h2>Javascript is used to create dynamic web pages</h2>")
+        document.write("<h3>Javascript is used to create dynamic web pages</h3>")
+        document.write("<h4>Javascript is used to create dynamic web pages</h4>")
+        document.write("<h5>Javascript is used to create dynamic web pages</h5>")
+        document.write("<h6>Javascript is used to create dynamic web pages</h6>")
+        document.write("<p>Javascript Introdution in detail</p>")
+
+        //button-action click-response
+        //Event handling action-events-click
+        //event is handled by a function
+        //
+
+
+        //function clickMe()
+        //{
+        //    console.log("Calling function clickMe")
+        //}
+        function mouseOver()
+        {
+            console.log("Calling function mouseOver")
+        }
+
+        function clickMe()
+        {
+            console.log("Calling function clickMe")
+            var message=document.getElementById("message")
+            console.log(message)
+            message.innerHTML='Calling function clickMe'
+            message.style.color='red'
+        }
+
+
+        </Script>
+    </head>
+    <body>
+        <h1>Javascript is used to create dynamic web pages</h1>
+        <h2>Javascript is used to create dynamic web pages</h2>
+
+        <!--<button onclick="clickMe()">Click Me!!</button>-->
+        <button onmouseover="clickMe()">Click Me!!</button>
+        <button onmouseover="mouseOver()">Mouse Over!!</button>
+        <br>
+        <button onclick="clickMe()">Click Me!!</button>
+        <span id="message"></span>
+
+    </body>
+</html>
